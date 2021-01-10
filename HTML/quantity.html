@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>document</title>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../CSS/test1.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="top">
+      <div class="quan">Quanment</div>
+      <div>history</div>
+    </div>
+    <div class="header">
+      <div>Welcome to Quantity Measurement</div>
+    </div>
+
+    <div class="parent">
+      <div class="choose">Choose type</div>
+      <div class="type">
+        <div id="first" class="card1 active" onclick="lengthFunc()">
+          <img alt="" />
+          <div class="unitName">length</div>
+        </div>
+        <div id="second" class="card2" onclick="tempFunc()">
+          <img alt="" />
+          <div class="unitName">temperature</div>
+        </div>
+        <div id="third" class="card3" onclick="volFunc()">
+          <img alt="" />
+          <div class="unitName">volume</div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="params">
+          <input
+            type="number"
+            style="height: 35px"
+            placeholder="From"
+            id="input"
+            onchange="unitConverter(this.value)"
+          />
+          <select id="inputType" onchange="unitConverterBySelect()" style="height: 34px"></select>
+        </div>
+        <div class="params">
+          <input
+            type="number"
+            style="height: 35px"
+            placeholder="To"
+            id="result"
+            onchange="unit1Converter(this.value)"
+          />
+          <select id="resultType" onchange="unit1ConverterBySelect()" style="height: 34px"></select>
+        </div>
+      </div>
+    </div>
+    <script src="..\JS\conversion.js"></script>
+  </body>
+</html>
